@@ -1,0 +1,37 @@
+body {
+	background-color: black;
+}
+table {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 5px;
+	background-color: white;
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	font-size: xx-large;
+}
+table, th, td {
+}
+th, td {
+	padding: 6px;
+	border: 1px solid #dddddd;
+}
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
+.title {
+	display: inline;
+	margin-left: 3%;
+	margin-right: auto;
+	width: 75%;
+}
+.rotc {
+	display: inline;
+	width: 7%;
+	margin-left: 2%;
+}
+.nevada {
+	display: inline;
+	width: 12%;
+}

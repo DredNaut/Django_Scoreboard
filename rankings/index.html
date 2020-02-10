@@ -1,0 +1,42 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'rankings/style.css' %}">
+<img src="{% static "rankings/rotc.png" %}" class="rotc" alt="Leadership Excellence">
+<img src="{% static "rankings/bcc.png" %}" class="title" alt="Best Cadet Competition">
+<img src="{% static "rankings/wolf.png" %}" class="nevada" alt="University of Nevada, Reno">
+
+{% if latest_members_list %}
+	<table>
+		<tr>
+			<th>RANK</th>
+			<th>TEAM</th>
+			<th>PT TEST</th>
+			<th>RUCK</th>
+			<th>WPNS</th>
+			<th>LN</th>
+			<th>TC3</th>
+			<th>EST</th>
+			<th>RADIO</th>
+			<th>HGAC</th>
+			<th>CFF</th>
+			<th>TOTAL</th>
+		</tr>
+	{% for member in rankings_list %}
+	<tr>
+		<th>{{ forloop.counter }}</th>
+		<th>{{ member.members }}</th>
+		<th>{{ member.pt_score}}</th>
+		<th>{{ member.ruck_score }}</th>
+		<th>{{member.wpns_score}}</th>
+		<th>{{ member.ln_score }}</th>
+		<th>{{ member.tc3_score }}</th>
+		<th>{{ member.est_score}}</th>
+		<th>{{ member.radio_score }}</th>
+		<th>{{ member.hgac_score }}</th>
+		<th>{{ member.cff_score }}</th>
+		<th>{{ member.total_score }}</th>
+	</tr>
+	{% endfor %}
+	</table>
+{% else %}
+	<p>No members available</p>
+{% endif %}
